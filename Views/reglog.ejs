@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./component/head',{data:{title:'index page'}}); %>
+</head>
+
+<body style="height: 100vh;">
+
+    <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-10">
+                <div class="card rounded-3">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="row" id="first">
+                            <h3  class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center text-decoration-underline">Registration Info</h3>
+                            <div class="offset-sm-3 col-sm-6">
+                            <form action="/register" method="post" class="px-md-2">
+
+                                <div class="form-outline mb-4">
+                                    <input type="text" name="userName" placeholder="Enter Your Name" required
+                                        class="form-control">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="email" name="email" placeholder="Enter Your email" required
+                                        class="form-control">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="tel" name="phone" placeholder="Enter Your Phone No" required
+                                        class="form-control">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="password" name="password" placeholder="Enter Your Password" required
+                                        class="form-control">
+                                </div>
+                                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                            </form>
+                            </div>
+                        </div>
+
+                        <div class="row" id="second">
+                            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2 text-center text-decoration-underline">Login Info</h3>
+                            <div class="offset-sm-3 col-sm-6">
+                            <form action="/login" method="post">
+
+                                <div class="form-outline mb-4">
+                                    <input type="email" name="email" placeholder="Enter Your Email" required class="form-control">
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="password" name="password" placeholder="Enter Your Password" required class="form-control">
+                                </div>
+                                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                            </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center pt-5">
+                                <button class="btn btn-outline-secondary" id="register">Register</button>
+                                <button class="btn btn-outline-secondary" id="login">Login</button>
+                            </div>
+                            <a href="/forget">forget password</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="container">
+        <div class="row" id="first">
+            <div class="offset-sm-3 col-sm-6">
+                <form action="/register" method="post">
+                    <input type="text" name="userName" placeholder="Enter Your Name" required><br><br>
+                    <input type="email" name="email" placeholder="Enter Your email" required><br><br>
+                    <input type="tel" name="phone" placeholder="Enter Your Phone No" required><br><br>
+                    <input type="password" name="password" placeholder="Enter Your password" required><br><br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="row" id="second">
+            <div class="offset-sm-3 col-sm-6">
+                <form action="/login" method="post">
+                <input type="email" name="email" placeholder="Enter Your email" required><br><br>
+                <input type="password" name="password" placeholder="Enter Your password" required><br><br>
+                <input type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center pt-5">
+                <button class="btn btn-primary" id="register">Register</button>
+                <button class="btn btn-primary" id="login">Login</button>
+            </div>
+            <a href="/forget">forget password</a>
+        </div>
+    </div> -->
+
+    <%- include('./component/footer') %>
+</body>
+
+</html>
